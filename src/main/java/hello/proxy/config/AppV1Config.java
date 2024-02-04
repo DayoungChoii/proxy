@@ -9,12 +9,12 @@ public class AppV1Config {
 
     @Bean
     public OrderControllerV1 orderControllerV1() {
-        return new OrderControllerV1V1Impl(orderServiceV1());
+        return new OrderControllerV1Impl(orderServiceV1());
     }
 
     @Bean
     public OrderServiceV1 orderServiceV1() {
-        return new OrderServiceImpl(orderRepositoryV1());
+        return new OrderServiceV1Impl(orderRepositoryV1());
     }
 
     @Bean
