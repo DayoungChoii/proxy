@@ -1,7 +1,6 @@
 package hello.proxy.app.v2;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,13 +18,13 @@ public class OrderControllerV2 {
     }
 
     @GetMapping("/v2/request")
-    String request(@RequestParam("itemId") String itemId){
+    public String request(@RequestParam("itemId") String itemId){
         orderServiceV2.orderItem(itemId);
         return "ok";
     }
 
     @GetMapping("/v2/no-log")
-    String noLog(){
+    public String noLog(){
         return "ok";
     }
 }
